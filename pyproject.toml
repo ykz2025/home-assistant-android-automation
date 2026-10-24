@@ -1,0 +1,19 @@
+[project]
+name = "home-assistant-android-automation"
+version = "0.1.0"
+description = "Mobile test automation framework for Home Assistant Android Companion App using Python, Appium 2, UiAutomator2, and Pytest"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pytest>=9.1.1",
+    "Appium-Python-Client>=6.0.8",
+    "selenium>=4.51.0",
+]
+
+[tool.pytest.ini_options]
+minversion = "9.0"
+addopts = "-v -s"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
