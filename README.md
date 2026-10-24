@@ -38,6 +38,7 @@ This project implements an end-to-end mobile automation solution using **Python*
 
 ```text
 home-assistant-android-automation/
+├── pyproject.toml          # Modern PEP 621 project configuration and dependencies
 ├── conftest.py             # Appium driver fixture, UiAutomator2Options, app lifecycle hooks
 ├── pages/
 │   ├── __init__.py
@@ -79,6 +80,10 @@ appium driver list --installed
 git clone https://github.com/ykz2025/home-assistant-android-automation.git
 cd home-assistant-android-automation
 
+# Option A: Modern setup via uv (recommended)
+uv sync
+
+# Option B: Standard setup via pip
 python -m venv venv
 .\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
